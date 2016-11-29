@@ -31,7 +31,15 @@ $this->params['breadcrumbs'][] = $this->title;
                 'attribute' => 'status',
                 'filter'=>array("active"=>"active","inactive"=>"inactive"),
             ],
-            ['class' => 'yii\grid\ActionColumn','template'=>'{update}{view}',],
+            [
+                'class' => 'yii\grid\ActionColumn',
+                'template'=>'{update}{view}{import}',
+                'buttons'=>[
+                    'import'=>function($url, $model,$key){
+                        return Html::a('<img src ='.Yii::$app->request->baseUrl.'/images/down2.png'.'>', ['import', 'id'=>$model->id]);
+                    },
+                ],
+                ],
         ],
     ]); ?>
 </div>

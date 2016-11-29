@@ -139,6 +139,10 @@ class FeedsourceController extends Controller
 
         return $this->redirect(['index']);
     }
+    
+    public function actionImport($id){
+        echo Yii::$app->request->baseUrl;
+    }
 
     /**
      * Finds the FeedSource model based on its primary key value.
