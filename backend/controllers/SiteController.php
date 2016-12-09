@@ -6,7 +6,7 @@ use yii\web\Controller;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
 use common\models\LoginForm;
-
+use backend\command\RssController;
 /**
  * Site controller
  */
@@ -22,7 +22,7 @@ class SiteController extends Controller
                 'class' => AccessControl::className(),
                 'rules' => [
                     [
-                        'actions' => ['login', 'error'],
+                        'actions' => ['login', 'error', 'rss'],
                         'allow' => true,
                     ],
                     [
@@ -61,6 +61,10 @@ class SiteController extends Controller
     public function actionIndex()
     {
         return $this->render('index');
+    }
+
+    public function actionRss(){
+        Yii::$app->runAction('rss/update', ['maya', 'banks']);
     }
 
     /**

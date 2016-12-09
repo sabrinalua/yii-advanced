@@ -141,7 +141,7 @@ class FeedsourceController extends Controller
     }
     
     public function actionImport($id){
-        echo Yii::$app->request->baseUrl;
+        echo $id;
     }
 
     /**

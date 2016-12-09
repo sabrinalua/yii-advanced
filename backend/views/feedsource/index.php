@@ -36,7 +36,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 'template'=>'{update}{view}{import}',
                 'buttons'=>[
                     'import'=>function($url, $model,$key){
-                        return Html::a('<img src ='.Yii::$app->request->baseUrl.'/images/down2.png'.'>', ['import', 'id'=>$model->id]);
+                        return Html::a('<img width=25 height=25 src ='.Yii::$app->request->baseUrl.'/images/down2.jpg'.'>', ['import', 'id'=>$model->id]);
                     },
                 ],
                 ],
