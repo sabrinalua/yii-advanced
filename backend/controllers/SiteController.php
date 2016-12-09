@@ -63,7 +63,8 @@ class SiteController extends Controller
     }
 
     public function actionRss(){
-        Yii::$app->runAction('rss/', ['maya', 'banks']);
+        // Yii::$app->runAction('rss/',['13']);
+         Yii::$app->runAction('rss/');
     }
 
     /**
