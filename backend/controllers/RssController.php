@@ -68,7 +68,9 @@ class RssController extends Controller{
 		foreach($arrays as $array){
 			$root_id = $array['uid'];
 			if($rs=$rss->get($array['link'])){
-				print_r($rs);
+				$root_type=$rs['type'];
+				echo $root_type;
+
 			}
 			
 			$j++;

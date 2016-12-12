@@ -21,7 +21,7 @@ class SiteController extends Controller
                 'class' => AccessControl::className(),
                 'rules' => [
                     [
-                        'actions' => ['login', 'error', 'rss'],
+                        'actions' => ['login', 'error', 'rss', 'util'],
                         'allow' => true,
                     ],
                     [
@@ -65,6 +65,10 @@ class SiteController extends Controller
     public function actionRss(){
         // Yii::$app->runAction('rss/',['13']);
          Yii::$app->runAction('rss/');
+    }
+
+    public function actionUtil(){
+        Yii::$app->runAction('util/');
     }
 
     /**
